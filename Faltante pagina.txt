@@ -1,0 +1,8 @@
+Agregar a la pagina un boton en el banner, arreglar letras y agregar mas cosas
+terminar comentario 2
+poner icono
+poner fotos que faltan
+hacer formulario de contacto
+hacer pagina de leer mas 
+hacer boton de primer comentario
+agregar condiciones al footer

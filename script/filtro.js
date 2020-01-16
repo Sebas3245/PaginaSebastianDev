@@ -18,7 +18,7 @@ $(function()
     let equipo = $('#equipo').offset().top,
         servicio = $('#servicio').offset().top,
         portafolio = $('#portafolio').offset().top,
-        fiabilidad = $('#fiabilidad').offset().top,
+        experiencia = $('#experiencia').offset().top,
         contacto = $('#contacto').offset().top;
     
     window.addEventListener('resize', function()
@@ -26,7 +26,7 @@ $(function()
         equipo = $('#equipo').offset().top,
         servicio = $('#servicio').offset().top,
         portafolio = $('#portafolio').offset().top,
-        fiabilidad = $('#fiabilidad').offset().top,
+        experiencia = $('#experiencia').offset().top,
         contacto = $('#contacto').offset().top;
     });
 
@@ -58,11 +58,11 @@ $(function()
               scrollTop: portafolio-100
         },600);
     });
-    $('#enlace-fiabilidad').on('click', function(e)
+    $('#enlace-experiencia').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: fiabilidad-100
+              scrollTop: experiencia-100
         },600);
     });
     $('#enlace-contacto').on('click', function(e)

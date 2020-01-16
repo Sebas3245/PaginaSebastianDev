@@ -521,7 +521,7 @@ MAIN
 }
 
 /*******
-ACERCA
+EQUIPO
 *********/
 .card
 {
@@ -535,6 +535,10 @@ ACERCA
   box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
   overflow: hidden;
   height: 400px;
+}
+.content-card img:hover
+{
+  box-shadow: 0 0 15px 0 rgba(80, 80, 80, 0.884);
 }
 .people
 {
@@ -594,7 +598,7 @@ SERVICIOS
   background-color: rgba(9, 73, 78, 0.575);
 }
 /***********
-Nuestro trabajo
+PORTAFOLIO
 ****************/
 .work
 {
@@ -651,6 +655,10 @@ Nuestro trabajo
   width: 100%;
   object-fit: cover; /*le quita lo apretadas a las imagenes*/
 }
+.img-work img:hover
+{
+  box-shadow: 0 0 15px 0 rgba(80, 80, 80, 0.884);
+}
 .textos-work
 {
   height: 10%;
@@ -661,7 +669,7 @@ Nuestro trabajo
   font-weight: 300;
 }
 /************
-Fiabilidad
+EXPERIENCIA
 *************/
 .fiabilidad-content>p
 {
@@ -682,6 +690,7 @@ Fiabilidad
 .caja-fi
 {
   width: 33%;
+  height: 380px;
   text-align: center;
   padding: 40px;
   border: 0.1px solid rgba(119, 119, 119, 0.24);
@@ -702,7 +711,7 @@ Fiabilidad
 {
   text-align: left;
   color: #6b6b6b;
-  font-size: 1.3em;
+  font-size: 1.1em;
 }
 .btn-leer>a
 {
@@ -795,10 +804,11 @@ CONTACTO
   justify-content: space-between;
   margin: auto;
   flex-wrap: wrap;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 .caja-contacto
 {
-  width: 30%;
+  width: 33%;
   margin: auto;
   text-align: center;
 }
@@ -834,11 +844,11 @@ CONTACTO
 .caja-contacto:nth-child(2)>a
 {
   color: #fff;
-  font-size: 1.3em;
-  font-weight: 500;
+  font-size: 1.1em;
   border: 2px solid rgba(255,255,255,.6);
   border-radius: 40px;
-  padding: 10px 20px;
+  padding: 10px 25px;
+  font-weight: bolder;
   transition: all .5s ease;
 }
 .caja-contacto:nth-child(2)>a:hover
@@ -903,7 +913,7 @@ footer div
 }
 .contacto-footer
 {
-  width: 15%;
+  width: 20%;
 }
 .contacto-footer a
 {
