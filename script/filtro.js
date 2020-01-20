@@ -72,4 +72,11 @@ $(function()
               scrollTop: contacto-100
         },600);
     });
+    $('#enlace-comenzar').on('click', function(e)
+    {
+        e.preventDefault();
+        $('html , body').animate({
+              scrollTop: equipo-100
+        },600);
+    });
 });
