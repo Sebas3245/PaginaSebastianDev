@@ -47,6 +47,10 @@
     {
       --margenes: 30px;
     }
+    .contenidoModal
+    {
+      width: 70%;
+    }
 }
 
 @media screen and (max-width: 500px)

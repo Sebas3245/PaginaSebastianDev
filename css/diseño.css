@@ -868,6 +868,7 @@ CONTACTO
 }
 .caja-contacto>a:hover
 {
+  cursor: pointer;
   color: var(--color3);
 }
 .caja-contacto:nth-child(2)>h1
@@ -983,4 +984,140 @@ footer p
   color: rgba(119, 119, 119, 0.678);
   padding: 5px 0;
   text-align: center;
+}
+
+/*************
+VENTANA MODAL
+***************/
+.flexModal
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal
+{
+  display: none;
+  position: fixed;
+  z-index: 999;
+  overflow: auto;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.514);
+}
+.contenidoModal
+{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  width: 60%;
+  height: 400px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.555);
+  animation: modal 1s;
+  display: flex;
+}
+@keyframes modal
+{
+  from
+  {
+    top: -330px;
+    opacity: 0;
+  }
+  to
+  {
+    top: 0;
+    opacity: 1;
+  }
+}
+.close
+{
+  color: #616161;
+  font-size: 30px;
+  font-weight: bold;
+}
+.close:hover
+{
+  color: rgb(49, 49, 49);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modalHeader
+{
+  padding: 8px 16px;
+  background: linear-gradient(to bottom,
+  rgba(49, 49, 49, 0.6),
+  rgba(44, 83, 141, 0.6),
+  rgba(7,109,150, .45)
+  ), url("/img/modaldofon.jpg");
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  color: #fff;
+}
+.modalHeader>i
+{
+  font-size: 80px;
+}
+.modalHeader>h2
+{
+  margin-bottom: 40px;
+}
+.modalHeader>a
+{
+  color: #fff;
+  transition: all .5s ease;
+}
+.modalHeader>a:hover
+{
+  color: rgb(161, 161, 161);
+}
+.modalBody
+{
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 60%;
+}
+.modalBody .tituBodyModal
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.modalBody>p
+{
+  text-align: justify;
+}
+.modalBody>input
+{
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgb(71, 71, 71);
+  width: 90%
+}
+.modalBody>button
+{
+  width: 130px;
+  margin-left: 60%;
+  background-color: rgba(0, 92, 167, 0.986);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  color: #fff;
+  transition: all .5s ease;
+  border-radius: 15px;
+}
+.modalBody>button:hover
+{
+  background-color: rgba(4, 86, 161, 0.986);
+  color: rgb(219, 219, 219);
+  box-shadow: 0 0 5px 0 rgba(80, 80, 80, 0.884);
 }

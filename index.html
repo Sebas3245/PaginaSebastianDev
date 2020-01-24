@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
     <link rel="icon" type="image/png" href="/img/codificacion.png" />
     <link rel="stylesheet" href="css/diseño.css">
     <link rel="stylesheet" href="css/media.css">
@@ -263,7 +264,7 @@
               <div class="caja-contacto mover" tipo-mov="mover-scale"">
                 <img src="img/contacto.png" alt="">
                 <h1>Contactanos</h1>
-                <a href="">CONTACTAR</a>
+                <a id="abrirModal">CONTACTAR</a>
               </div>
               <div class="caja-contacto mover" tipo-mov="mover-scale"">
                 <img src="img/llamada.png" alt="">
@@ -310,7 +311,33 @@
       </div>
       <p>© 2020 Sebastian Lara</p>
     </footer>
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
+    <div class="modal" id="miModal">
+      <div class="flexModal" id="flexModal">
+        <div class="contenidoModal">
+          <div class="modalHeader">
+            <i class="fas fa-user-circle"></i>
+            <h2>Informacion de contacto</h2>
+            <a href="tel:+573043981250"><i class="fas fa-mobile-alt"></i> +57 3043981250</a>
+            <a href="mailto:jsebastianlara3245@gmail.com"><i class="fas fa-envelope"></i> jsebastianlara3245@gmail.com</a>
+          </div>
+          <div class="modalBody">
+            <div class="tituBodyModal">
+              <h2>Envia un mensaje</h2>
+              <span class="close" id="close">&times;</span>
+            </div>
+            <p>Nombres*</p>
+            <input type="text">
+            <p>Telefono / Celular*</p>
+            <input type="text">
+            <p>Correo electronico*</p>
+            <input type="text">
+            <p>Mensaje*</p>
+            <input type="text">
+            <button>Enviar mensaje</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="https://kit.fontawesome.com/0e3f4ec1b5.js" crossorigin="anonymous"></script>
     <script src="script/jquery.js"></script>
     <script src="script/main.js"></script>

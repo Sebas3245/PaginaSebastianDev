@@ -131,4 +131,27 @@ window.addEventListener('resize', function()
   }
 });
 
+//VENTANA MODAL
+let modal = document.getElementById('miModal');
+let flex = document.getElementById('flexModal');
+let abrirModal = document.getElementById('abrirModal');
+let cerrarModal = document.getElementById('close')
+
+abrirModal.addEventListener('click', function() 
+{  
+  modal.style.display = 'block';
+});
+
+cerrarModal.addEventListener('click', function() 
+{  
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(e)
+{
+  if(e.target == flex)
+  {
+    modal.style.display = 'none';
+  }
+});
 
