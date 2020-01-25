@@ -989,6 +989,19 @@ footer p
 /*************
 VENTANA MODAL
 ***************/
+.modal
+{
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  transition: opacity 0.35s ease;
+}
 .flexModal
 {
   width: 100%;
@@ -997,41 +1010,17 @@ VENTANA MODAL
   justify-content: space-between;
   align-items: center;
 }
-.modal
+.modal .contenidoModal
 {
-  display: none;
   position: fixed;
-  z-index: 999;
-  overflow: auto;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.514);
-}
-.contenidoModal
-{
-  position: relative;
+  top: -100vh;
+  transition: top 0.35s ease;
   background-color: #fefefe;
-  margin: auto;
+  margin: 0 300px;
   width: 60%;
   height: 400px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.555);
-  animation: modal 1s;
   display: flex;
-}
-@keyframes modal
-{
-  from
-  {
-    top: -330px;
-    opacity: 0;
-  }
-  to
-  {
-    top: 0;
-    opacity: 1;
-  }
 }
 .close
 {
@@ -1059,6 +1048,7 @@ VENTANA MODAL
   justify-content: center;
   width: 40%;
   color: #fff;
+  box-shadow: 8px 0 8px -5px #333;
 }
 .modalHeader>i
 {
@@ -1080,44 +1070,61 @@ VENTANA MODAL
 .modalBody
 {
   padding: 16px 20px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.modalBody>form
+{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 60%;
+  height: 100%;
 }
 .modalBody .tituBodyModal
 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: rgba(0, 92, 167, 0.986);
 }
-.modalBody>p
-{
-  text-align: justify;
-}
-.modalBody>input
+.modalBody input, .modalBody textarea
 {
   outline: none;
   border: none;
-  border-bottom: 1px solid rgb(71, 71, 71);
-  width: 90%
+  border-bottom: 1px solid rgba(94, 94, 94, 0.452);
+  width: 90%;
+  transition: all .5s ease;
 }
-.modalBody>button
+.modalBody input:focus, .modalBody textarea:focus
+{
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+.modalBody button
 {
   width: 130px;
   margin-left: 60%;
-  background-color: rgba(0, 92, 167, 0.986);
+  color: rgba(0, 92, 167, 0.986);
   outline: none;
   border: none;
   cursor: pointer;
   padding: 5px 10px;
-  color: #fff;
   transition: all .5s ease;
-  border-radius: 15px;
+  border: 1px solid rgba(0, 92, 167, 0.986);
+  font-weight: bold;
 }
-.modalBody>button:hover
+.modalBody button:hover
 {
   background-color: rgba(4, 86, 161, 0.986);
   color: rgb(219, 219, 219);
-  box-shadow: 0 0 5px 0 rgba(80, 80, 80, 0.884);
+}
+.modal:target
+{
+  opacity: 1;
+  top: 0;
+}
+.modal:target .contenidoModal
+{
+  top: 80px;
+  transition: top 0.35s ease;
 }
