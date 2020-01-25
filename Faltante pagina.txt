@@ -1,6 +1,5 @@
 poner fotos que faltan
-hacer formulario de contacto
 hacer pagina de leer mas 
 hacer boton de primer comentario
-agregar condiciones al footer
 hacer automatico el portafolio
+hacer que el formulario contacto tenga base de datos

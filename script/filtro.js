@@ -1,3 +1,36 @@
+//ALMACENAR EN PORTAFLIO
+$(document).ready(function()
+{
+  getPortafolio();
+});
+
+var portafolioImg;
+
+function getPortafolio()
+{
+  $.getJSON("script/portafolio.json",function(pjson)
+  {
+    portafolioImg=pjson;
+    genPortafolio(portafolioImg);
+  });
+}
+
+function genPortafolio(portafolioImg)
+{
+  $.each(portafolioImg.portafolio,function(i,porta) //ciclo
+    {
+    $("#galeria-work").append(`<div class="cont-work `+porta.dataNombre+`">
+                <div class="img-work">
+                    <img src=`+porta.imagen+` alt="">
+                </div>
+                <div class="textos-work">
+                    <h4>`+porta.titulo+`</h4>
+                </div>
+            </div>`);
+    });
+}
+
+//FILTRO DE SELECCION PORTAFOLIO
 $(function()
 {
     $('.filter').click(function()
@@ -15,6 +48,8 @@ $(function()
         }
     });
 
+
+//FILTRO DE SCROLL DEL MENU
     let equipo = $('#equipo').offset().top,
         servicio = $('#servicio').offset().top,
         portafolio = $('#portafolio').offset().top,

@@ -1,0 +1,65 @@
+{
+  "portafolio":
+  [
+    {
+      "imagen": "img/portaweb1.jpg",
+      "titulo": "1 pagina web",
+      "dataNombre":"web"
+    },
+    {
+      "imagen": "img/portaweb2.jpg",
+      "titulo": "2 pagina web",
+      "dataNombre":"web"
+    },
+    {
+      "imagen": "img/portaweb3.png",
+      "titulo": "3 pagina web",
+      "dataNombre":"web"
+    },
+    {
+      "imagen": "img/portaescri1.jpg",
+      "titulo": "1 aplicacion escritorio",
+      "dataNombre":"escritorio"
+    },
+    {
+      "imagen": "img/portaescri2.jpg",
+      "titulo": "2 aplicacion escritorio",
+      "dataNombre":"escritorio"
+    },
+    {
+      "imagen": "img/portaescri3.jpg",
+      "titulo": "3 aplicacion escritorio",
+      "dataNombre":"escritorio"
+    },
+    {
+      "imagen": "img/portamovil1.png",
+      "titulo": "1 aplicacion movil",
+      "dataNombre":"android"
+    },
+    {
+      "imagen": "img/portamovil2.png",
+      "titulo": "2 aplicacion movil",
+      "dataNombre":"android"
+    },
+    {
+      "imagen": "img/portamovil3.png",
+      "titulo": "3 aplicacion movil",
+      "dataNombre":"android"
+    },
+    {
+      "imagen": "img/portadb1.jpg",
+      "titulo": "1 Base de datos",
+      "dataNombre":"db"
+    },
+    {
+      "imagen": "img/portadb2.jpg",
+      "titulo": "2 Base de datos",
+      "dataNombre":"db"
+    },
+    {
+      "imagen": "img/portadb3.jpg",
+      "titulo": "3 Base de datos",
+      "dataNombre":"db"
+    }
+  ]
+}

@@ -427,6 +427,7 @@ nav .enlaces a:hover
   position: absolute;
   top: 320px;
   left: 90px;
+  width: 45%;
   animation: animtitu2-2 15s infinite;
   transition: top 0.35s ease; 
   text-shadow: 3px 3px rgba(0, 0, 0, 0.671);
@@ -691,6 +692,7 @@ PORTAFOLIO
 .img-work img:hover
 {
   box-shadow: 0 0 15px 0 rgba(80, 80, 80, 0.884);
+  transform: scale(1.02 ,1);
 }
 .textos-work
 {
@@ -767,7 +769,7 @@ Comunicado
 *************/
 .comunicado1-fondo
 {
-  background-image: url("/img/comunicado1.jpg");
+  background-image: url("/img/dofoncomunicado.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
