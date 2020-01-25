@@ -121,9 +121,7 @@
               <li class="filter mover" tipo-mov="mover-scale" data-nombre="db">DB</li>
             </ul>
           </div>
-          <div class="galeria-work" id="galeria-work">
-            
-          </div>
+          <div class="galeria-work" id="galeria-work"></div>
         </section>
         <section class="comunicado1-fondo">
           <div class="comunicado1-content">
@@ -230,20 +228,24 @@
               <h2>Envia un mensaje</h2>
               <a href="#contacto" class="close" id="close">&times;</a>
             </div>
-            <form action="">
+            <form action="script/contacto.php" method="post">
               <p>Nombres*</p>
-              <input type="text" required>
+              <input type="text" name="nombre" required>
               <p>Telefono / Celular*</p>
-              <input type="text" required>
+              <input type="text" name="telefono" required>
               <p>Correo electronico*</p>
-              <input type="text" required>
+              <input type="text" name="correo" required>
               <p>Mensaje*</p>
-              <textarea rows="2" cols="25" required></textarea>
+              <textarea rows="2" cols="25" name="mensaje" required></textarea>
               <button type="submit">Enviar mensaje</button>
             </form>
           </div>
         </div>
       </div>
+    </div>
+    <div class="modalMensaje" id="modalMensaje">
+      <a href="#miModal" class="close" id="close">&times;</a>
+      <h1>Mensaje Enviado!</h1>
     </div>
     <script src="https://kit.fontawesome.com/0e3f4ec1b5.js" crossorigin="anonymous"></script>
     <script src="script/jquery.js"></script>

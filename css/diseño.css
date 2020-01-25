@@ -1096,6 +1096,8 @@ VENTANA MODAL
   border: none;
   border-bottom: 1px solid rgba(94, 94, 94, 0.452);
   width: 90%;
+  max-width: 90%;
+  max-height: 100px;
   transition: all .5s ease;
 }
 .modalBody input:focus, .modalBody textarea:focus

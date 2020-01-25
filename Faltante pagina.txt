@@ -1,5 +1,4 @@
 poner fotos que faltan
 hacer pagina de leer mas 
 hacer boton de primer comentario
-hacer automatico el portafolio
 hacer que el formulario contacto tenga base de datos
