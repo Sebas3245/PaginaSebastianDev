@@ -1132,3 +1132,44 @@ VENTANA MODAL
   top: 80px;
   transition: top 0.35s ease;
 }
+/********************
+MODAL MENSAJE ENVIADO
+*********************/
+.modalMensaje
+{
+  position: fixed;
+  transition: all 0.35s ease;
+  background-color: rgba(0, 92, 167, 0.808);
+  z-index: 9999;
+  width: 200px;
+  height: 90px;
+  top: 35%;
+  left: 55%;
+  transform: scale(0,0);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.555);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.modalMensaje>span
+{
+  display: flex;
+  justify-content: flex-end;
+}
+.modalMensaje a
+{
+  font-size: 20px;
+  color: black;
+  margin-right: 10px;
+}
+.modalMensaje a:hover
+{
+  transform: scale(1.2,1.2);
+}
+.modalMensaje>h3
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-align: center;
+  background-color: rgba(240, 255, 255, 0.863);
+  padding: 10px 15px;
+}

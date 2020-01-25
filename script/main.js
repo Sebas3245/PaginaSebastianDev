@@ -139,5 +139,21 @@ window.addEventListener('click', function(e)
   if(e.target == flex)
   {
     window.location = '#cuerpo'
+    $('#modalMensaje').css({'transform':'scale(0,0)'}); 
   }
+});
+
+//VETNANA MODAL MENSAJE
+var msg = document.getElementById('enviarMsg')
+function enviarMensaje()
+{
+  if(msg)
+  {
+    $('#modalMensaje').css({'transform':'scale(1,1)'});
+  }
+}
+
+$('#closeMensajeM').click(function() 
+{ 
+  $('#modalMensaje').css({'transform':'scale(0,0)'}); 
 });

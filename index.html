@@ -237,15 +237,15 @@
               <input type="text" name="correo" required>
               <p>Mensaje*</p>
               <textarea rows="2" cols="25" name="mensaje" required></textarea>
-              <button type="submit">Enviar mensaje</button>
+              <button type="submit" onclick="enviarMensaje()" id="enviarMsg">Enviar mensaje</button>
             </form>
+            <div class="modalMensaje" id="modalMensaje">
+              <span><a href="#miModal" id="closeMensajeM">&times;</a></span>
+              <h3>Mensaje Enviado!</h3>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="modalMensaje" id="modalMensaje">
-      <a href="#miModal" class="close" id="close">&times;</a>
-      <h1>Mensaje Enviado!</h1>
     </div>
     <script src="https://kit.fontawesome.com/0e3f4ec1b5.js" crossorigin="anonymous"></script>
     <script src="script/jquery.js"></script>
