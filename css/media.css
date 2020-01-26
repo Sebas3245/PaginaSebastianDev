@@ -62,23 +62,23 @@
   }
   .textos .t1-1
   {
-    left: 20%;
+    left: 12%;
     font-size: 35px;
   }
   .textos .t2-1
   {
     top: 45%;
-    left: 28%;
+    left: 20%;
     font-size: 16px;
   }
   .textos .t1-2
   {
-    font-size: 18px;
+    font-size: 15px;
   }
   .textos .t2-2
   {
-    top: 45%;
-    font-size: 15px;
+    top: 43%;
+    font-size: 12px;
   }
   :root
   {
