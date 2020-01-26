@@ -133,6 +133,7 @@ window.addEventListener('resize', function()
 
 //VENTANA MODAL
 let flex = document.getElementById('flexModal');
+document.getElementById("nombre").focus();
 
 window.addEventListener('click', function(e)
 {
@@ -147,10 +148,28 @@ window.addEventListener('click', function(e)
 var msg = document.getElementById('enviarMsg')
 function enviarMensaje()
 {
-  if(msg)
-  {
-    $('#modalMensaje').css({'transform':'scale(1,1)'});
-  }
+  var param = {
+    nombre: document.getElementById("nombre").value,
+    telefono: document.getElementById("telefono").value,
+    correo: document.getElementById("correo").value,
+    mensaje: document.getElementById("mensaje").value
+  };
+
+    
+  $.ajax({
+    type: "POST",
+    url: "script/contacto.php",
+    data: param,
+    success: function() 
+    {
+      $('#modalMensaje').css({'transform':'scale(1,1)'});
+      /*La variable data contiene la respuesta de tu script PHP*/
+      document.getElementById("nombre").value="";
+      document.getElementById("telefono").value="";
+      document.getElementById("correo").value="";
+      document.getElementById("mensaje").value="";
+    }
+  });
 }
 
 $('#closeMensajeM').click(function() 

@@ -228,16 +228,16 @@
               <h2>Envia un mensaje</h2>
               <a href="#contacto" class="close" id="close">&times;</a>
             </div>
-            <form action="script/contacto.php" method="post">
+            <form>
               <p>Nombres*</p>
-              <input type="text" name="nombre" required>
+              <input type="text" id="nombre" required>
               <p>Telefono / Celular*</p>
-              <input type="text" name="telefono" required>
+              <input type="text" id="telefono" required>
               <p>Correo electronico*</p>
-              <input type="text" name="correo" required>
+              <input type="text" id="correo" required>
               <p>Mensaje*</p>
-              <textarea rows="2" cols="25" name="mensaje" required></textarea>
-              <button type="submit" onsubmit="enviarMensaje()" id="enviarMsg">Enviar mensaje</button>
+              <textarea rows="2" cols="25" id="mensaje" required></textarea>
+              <button type="button" onclick="enviarMensaje()" id="enviarMsg">Enviar mensaje</button>
             </form>
             <div class="modalMensaje" id="modalMensaje">
               <span><a href="#miModal" id="closeMensajeM">&times;</a></span>
