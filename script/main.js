@@ -144,7 +144,7 @@ window.addEventListener('click', function(e)
   }
 });
 
-//VETNANA MODAL MENSAJE
+//VETANA MODAL MENSAJE
 var msg = document.getElementById('enviarMsg')
 function enviarMensaje()
 {
@@ -155,21 +155,45 @@ function enviarMensaje()
     mensaje: document.getElementById("mensaje").value
   };
 
-    
-  $.ajax({
-    type: "POST",
-    url: "script/contacto.php",
-    data: param,
-    success: function() 
-    {
-      $('#modalMensaje').css({'transform':'scale(1,1)'});
-      /*La variable data contiene la respuesta de tu script PHP*/
-      document.getElementById("nombre").value="";
-      document.getElementById("telefono").value="";
-      document.getElementById("correo").value="";
-      document.getElementById("mensaje").value="";
+  if(param.nombre == "") {
+    document.getElementById("nombre").focus();
+  }
+  else{
+    if(param.telefono == ""){
+      document.getElementById("telefono").focus();
     }
-  });
+    else{
+      if(isNaN(param.telefono)){
+        alert("El telefono debe llenarse con campos numericos");
+      }
+      else{
+        if(param.correo == ""){
+          document.getElementById("correo").focus();
+        }
+        else{
+          if(param.mensaje == ""){
+            document.getElementById("mensaje").focus();
+          }
+          else
+          {
+            $.ajax({
+              type: "POST",
+              url: "script/contacto.php",
+              data: param,
+              success: function() 
+              {
+                $('#modalMensaje').css({'transform':'scale(1,1)'});
+                document.getElementById("nombre").value="";
+                document.getElementById("telefono").value="";
+                document.getElementById("correo").value="";
+                document.getElementById("mensaje").value="";
+              }
+            });
+          }
+        }
+      }
+    }
+  }
 }
 
 $('#closeMensajeM').click(function() 

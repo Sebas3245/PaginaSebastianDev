@@ -48,7 +48,6 @@ $(function()
         }
     });
 
-
 //FILTRO DE SCROLL DEL MENU
 
     $('#enlace-inicio').on('click', function(e)
