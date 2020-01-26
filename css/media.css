@@ -13,7 +13,7 @@
     {
       position: fixed;
       top: 80px;
-      background: #2c3e50;
+      background: #f2f2f2b0;
       left: 0;
       height: 100%;
       transition: 1s;
@@ -27,7 +27,7 @@
       height: 50px;
       padding: 20px;
       text-align: center;
-      background: #34495e;
+      background: #f2f2f29d;
       color: #fff;
     }
     .textos>h1
@@ -55,6 +55,31 @@
 
 @media screen and (max-width: 500px)
 {
+  header 
+  {
+    height: 480px;
+    background-size: initial;
+  }
+  .textos .t1-1
+  {
+    left: 20%;
+    font-size: 35px;
+  }
+  .textos .t2-1
+  {
+    top: 45%;
+    left: 28%;
+    font-size: 16px;
+  }
+  .textos .t1-2
+  {
+    font-size: 18px;
+  }
+  .textos .t2-2
+  {
+    top: 45%;
+    font-size: 15px;
+  }
   :root
   {
     --espacios-contenido: 25px;
@@ -72,12 +97,44 @@
   {
     width: 85%;
   }
+  .comunicado1-fondo 
+  {
+    background-position: right;
+    padding: 40px 10px;
+  }
+  .comunicado1-content>h3::after 
+  {
+    margin-left: 60%;
+  }
+  .comunicado1-content 
+  {
+    max-width: 100%;
+  }
+  .caja-fi
+  {
+    width: 85%;
+    height: 400px;
+  }
+  .servicios
+  {
+    justify-content: center;
+  }
+  .caja-contacto
+  {
+    width: 85%;
+    height: 200px;
+  }
   .marca-logo
+  {
+    width: 4%;
+    transform: scale(0,0);
+  }
+  .contacto-footer
   {
     width: 70%;
   }
-  .iconos
+  .redes-footer
   {
-    margin: auto;
+    width: 25%;
   }
 }

@@ -325,8 +325,8 @@ nav .enlaces a:hover
 {
   font-size: 80px;
   position: absolute;
-  top: 220px;
-  left: 360px;
+  top: 35%;
+  left: 29%;
   animation: animtitu1-1 15s infinite;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.671);
   transition: top 0.35s ease; 
@@ -360,8 +360,8 @@ nav .enlaces a:hover
   font-weight: 300;
   color: rgba(10, 112, 119, 0.884);
   position: absolute;
-  top: 330px;
-  left: 510px;
+  top: 52%;
+  left: 37%;
   animation: animtitu2-1 15s infinite;
   transition: top 0.35s ease; 
   text-shadow: 2px 3px rgba(0, 0, 0, 0.671);
@@ -393,8 +393,8 @@ nav .enlaces a:hover
 {
   font-size: 50px;
   position: absolute;
-  top: 220px;
-  left: 80px;
+  top: 35%;
+  left: 5%;
   animation: animtitu1-2 15s infinite;
   transition: top 0.35s ease; 
   background-color: rgba(9, 73, 78, 0.658);
@@ -425,8 +425,8 @@ nav .enlaces a:hover
   font-size: 25px;
   font-weight: 300;
   position: absolute;
-  top: 320px;
-  left: 90px;
+  top: 52%;
+  left: 5%;
   width: 45%;
   animation: animtitu2-2 15s infinite;
   transition: top 0.35s ease; 
@@ -670,7 +670,7 @@ PORTAFOLIO
   flex-wrap: wrap; /* los elementos no entran en la misma linea*/
   justify-content: space-around;
 }
-.galeria-work .cont-work
+.cont-work
 {
   width: 31%;
   box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
