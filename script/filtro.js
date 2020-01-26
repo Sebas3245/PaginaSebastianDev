@@ -56,6 +56,14 @@ $(function()
         experiencia = $('#experiencia').offset().top,
         contacto = $('#contacto').offset().top;
     
+    $(window).scroll(function () { 
+        equipo = $('#equipo').offset().top,
+        servicio = $('#servicio').offset().top,
+        portafolio = $('#portafolio').offset().top,
+        experiencia = $('#experiencia').offset().top,
+        contacto = $('#contacto').offset().top;
+    });
+    
     window.addEventListener('resize', function()
     {
         equipo = $('#equipo').offset().top,
