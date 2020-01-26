@@ -60,6 +60,39 @@ function menus()
     }
 }
 
+//FIX TEXTOS HEADER
+window.setInterval(function()
+{
+  var txtG = document.getElementById('textosG');
+  var txt1 = document.getElementById('t1-1');
+  var txt2 = document.getElementById('t2-1');
+
+  if(txt1.innerText == "SebastianDev")
+  {
+    txtG.style.alignItems = "flex-start";
+
+    txt1.innerHTML = "DESARROLLO DE SOFTWARE";
+    $(txt1).removeClass('t1-1');
+    $(txt1).addClass('t1-2');
+
+    txt2.innerHTML = "Somos un equipo de desarrollo de software en diferentes areas como Sitios web / Aplicaciones de Escritorio / Aplicaciones Moviles, segun lo requerido por el cliente.";
+    $(txt2).removeClass('t2-1');
+    $(txt2).addClass('t2-2');
+  }
+  else if(txt1.innerText == "DESARROLLO DE SOFTWARE")
+  {
+    txtG.style.alignItems = "center";
+
+    txt1.innerHTML = "SebastianDev";
+    $(txt1).removeClass('t1-2');
+    $(txt1).addClass('t1-1');
+
+    txt2.innerHTML = "Equipo de desarrollo";
+    $(txt2).removeClass('t2-2');
+    $(txt2).addClass('t2-1');
+  }
+},5200);
+
 // ANIMACION ELEMENTOS
 function aparecerElementos()
 {
