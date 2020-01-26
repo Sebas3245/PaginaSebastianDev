@@ -50,28 +50,6 @@ $(function()
 
 
 //FILTRO DE SCROLL DEL MENU
-    let equipo = $('#equipo').offset().top,
-        servicio = $('#servicio').offset().top,
-        portafolio = $('#portafolio').offset().top,
-        experiencia = $('#experiencia').offset().top,
-        contacto = $('#contacto').offset().top;
-    
-    $(window).scroll(function () { 
-        equipo = $('#equipo').offset().top,
-        servicio = $('#servicio').offset().top,
-        portafolio = $('#portafolio').offset().top,
-        experiencia = $('#experiencia').offset().top,
-        contacto = $('#contacto').offset().top;
-    });
-    
-    window.addEventListener('resize', function()
-    {
-        equipo = $('#equipo').offset().top,
-        servicio = $('#servicio').offset().top,
-        portafolio = $('#portafolio').offset().top,
-        experiencia = $('#experiencia').offset().top,
-        contacto = $('#contacto').offset().top;
-    });
 
     $('#enlace-inicio').on('click', function(e)
     {
@@ -84,42 +62,42 @@ $(function()
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: equipo-100
+              scrollTop: $('#equipo').offset().top-100
         },600);
     });
     $('#enlace-servicio').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: servicio-100
+              scrollTop: $('#servicio').offset().top-100
         },600);
     });
     $('#enlace-portafolio').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: portafolio-100
+              scrollTop: $('#portafolio').offset().top-100
         },600);
     });
     $('#enlace-experiencia').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: experiencia-100
+              scrollTop: $('#experiencia').offset().top-100
         },600);
     });
     $('#enlace-contacto').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: contacto-100
+              scrollTop: $('#contacto').offset().top-100
         },600);
     });
     $('#enlace-comenzar').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
-              scrollTop: equipo-100
+              scrollTop: $('#equipo').offset().top-100
         },600);
     });
 });
