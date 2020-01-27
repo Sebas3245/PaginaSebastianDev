@@ -57,7 +57,7 @@
 {
   header 
   {
-    height: 500px;
+    height: 550px;
     background-size: initial;
   }
   .textos .t1-1
@@ -76,6 +76,7 @@
   }
   .textos .t2-2
   {
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.671);
     font-size: 12px;
   }
   :root
