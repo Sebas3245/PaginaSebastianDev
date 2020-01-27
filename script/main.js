@@ -221,7 +221,16 @@ function enviarMensaje()
           {
             $.ajax({
               type: "POST",
-              url: "script/contacto.php",
+              url: "script/contactodb.php",
+              data: param,
+              success: function() 
+              {
+
+              }
+            });
+            $.ajax({
+              type: "POST",
+              url: "script/contactomail.php",
               data: param,
               success: function() 
               {
