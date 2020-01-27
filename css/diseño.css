@@ -318,7 +318,7 @@ nav .enlaces a:hover
   font-family: 'Archivo Black', sans-serif;
   letter-spacing: 2px;
   width: 100%;
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -447,7 +447,7 @@ nav .enlaces a:hover
 .btn-comenzar
 {
   width: 100%;
-  height: 20%;
+  height: 10%;
   display:flex;
   justify-content: flex-end;
   flex-direction: column;
