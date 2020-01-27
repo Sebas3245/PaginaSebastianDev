@@ -29,44 +29,44 @@ function menus()
 
   let desplazamiento_actual = window.pageYOffset;
 
-    if(desplazamiento_actual<=300)
+  if(desplazamiento_actual<=300)
+  {
+    nav.classList.remove('nav2');
+    nav.classList.remove('nav3');
+    nav.className = ('nav1');
+    nav.style.transition='1s';
+    menu.style.top = '80px'
+    abrir.style.color = '#fff';
+    if(x.matches)
     {
-      nav.classList.remove('nav2');
-      nav.classList.remove('nav3');
-      nav.className = ('nav1');
-      nav.style.transition='1s';
-      menu.style.top = '80px'
-      abrir.style.color = '#fff';
-      if(x.matches)
-      {
-        $('.btn-header').css({'color':'black'});
-      }
-      else
-      {
-        $('.btn-header').css({'color':'white'});
-      }
-      $('.btn-contact').css({'color':'rgb(9, 73, 78)','background':'white'});
-    }
-    else if(desplazamiento_actual>300 && desplazamiento_actual<=900)
-    {
-      nav.classList.remove('nav1');
-      nav.classList.remove('nav3');
-      nav.className = ('nav2');
-      menu.style.top = '100px';
-      abrir.style.color = '#000';
       $('.btn-header').css({'color':'black'});
-      $('.btn-contact').css({'color':'white','background':'black'});
     }
     else
     {
-      nav.classList.remove('nav1');
-      nav.classList.remove('nav2');
-      nav.className = ('nav3');
-      menu.style.top = '100px';
-      abrir.style.color = '#000';
-      $('.btn-header').css({'color':'black'});
-      $('.btn-contact').css({'color':'white','background':'black'});
+      $('.btn-header').css({'color':'white'});
     }
+    $('.btn-contact').css({'color':'rgb(9, 73, 78)','background':'white'});
+  }
+  else if(desplazamiento_actual>300 && desplazamiento_actual<=900)
+  {
+    nav.classList.remove('nav1');
+    nav.classList.remove('nav3');
+    nav.className = ('nav2');
+    menu.style.top = '100px';
+    abrir.style.color = '#000';
+    $('.btn-header').css({'color':'black'});
+    $('.btn-contact').css({'color':'white','background':'black'});
+  }
+  else
+  {
+    nav.classList.remove('nav1');
+    nav.classList.remove('nav2');
+    nav.className = ('nav3');
+    menu.style.top = '100px';
+    abrir.style.color = '#000';
+    $('.btn-header').css({'color':'black'});
+    $('.btn-contact').css({'color':'white','background':'black'});
+  }
 }
 
 //FIX TEXTOS HEADER
