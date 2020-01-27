@@ -25,6 +25,8 @@ window.addEventListener('scroll', function()
 //HEADER NAV BACKGROUND
 function menus()
 {
+  var x = window.matchMedia("(max-width: 500px)");
+
   let desplazamiento_actual = window.pageYOffset;
 
     if(desplazamiento_actual<=300)
@@ -35,7 +37,14 @@ function menus()
       nav.style.transition='1s';
       menu.style.top = '80px'
       abrir.style.color = '#fff';
-      $('.btn-header').css({'color':'white'});
+      if(x.matches)
+      {
+        $('.btn-header').css({'color':'black'});
+      }
+      else
+      {
+        $('.btn-header').css({'color':'white'});
+      }
       $('.btn-contact').css({'color':'rgb(9, 73, 78)','background':'white'});
     }
     else if(desplazamiento_actual>300 && desplazamiento_actual<=900)
@@ -162,6 +171,7 @@ window.addEventListener('resize', function()
     menu.style.removeProperty('overflow');
     menu.style.removeProperty('width');
   }
+  menus();
 });
 
 //VENTANA MODAL
