@@ -197,7 +197,7 @@ HEADER
 header
 {
   width: 100%;
-  height: 600px;
+  height: 95vh;
   background-attachment: fixed; /* efecto paralax: ir bajando con el scroll*/
   background-size: cover; /* Se adapta a toda la pantalla (cover)*/
   animation: animBanner 15s infinite linear;

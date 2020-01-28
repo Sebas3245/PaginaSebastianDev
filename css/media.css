@@ -57,8 +57,11 @@
 {
   header 
   {
-    height: 550px;
     background-size: initial;
+  }
+  .contenedor-nav
+  {
+    flex-direction: row-reverse;
   }
   .textos .t1-1
   {
