@@ -5,8 +5,8 @@
   $correo = $_POST["correo"];
   $mensaje = $_POST["mensaje"];
   $contenido = "Nombre: " . $nombre . "\nCorreo: " . $correo . "\nTelefono: " . $telefono . "\nMensaje: " . $mensaje;
-  $header = "From: $nombre"  . "\r\n";
-  $header.= "Reply-To: $correo" . "\r\n";
+  $header = "From: SebastianDev"  . "\r\n";
+  $header.= "Reply-To: ContactoDev@noreply.com" . "\r\n";
   $header.= "X-Mailer: PHP/" . phpversion();
   mail($destino, "Contacto SebastianDev", $contenido, $header);
 ?>
