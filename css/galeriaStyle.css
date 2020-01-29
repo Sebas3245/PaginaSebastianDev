@@ -1,0 +1,152 @@
+/*************
+ GENERAL
+*************/
+:root
+{
+  --primary-color: #ff2D55;
+  --color: #1b2e38;
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body
+{
+  font-family: "Poppins";
+}
+.title
+{
+  font-size: 3em;
+  color: var(--color);
+  text-align: center;
+  margin-top: 1em;
+}
+.title span
+{
+  color: var(--primary-color);
+}
+
+/*************
+ESTILOS GALERIA 
+**************/
+.galeria-container
+{
+  padding: 2em;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1.5em;
+}
+.gallery-item
+{
+  width: 100%;
+  height: 200px;
+  max-width: 400px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.gallery-img
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all .5s;
+}
+
+/************
+EFECTO HOVER
+*************/
+.gallery-item::before
+{
+  content: url("/img/ojo.png");
+  position: absolute;
+  transform: scale(0.1);
+  opacity: 0;
+}
+.gallery-item:hover .gallery-img
+{
+  transform: scale(1.2);
+  filter: blur(3px);
+  opacity: 0.4;
+}
+.gallery-item:hover::before
+{
+  opacity: 1;
+}
+
+/***************
+ESTILOS LIGHTBOX
+***************/
+.lightbox-overlay
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 45, 83, 0.822);
+  display: flex;
+  z-index: 100;
+}
+.lightbox-container
+{
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 1em;
+
+  
+}
+.lightbox-container>img{
+  width: 100%;
+  border-radius: 1em;
+  padding-bottom: 1em;
+}
+.close-modal
+{
+  --size: 2.5em;
+  background: #fff;
+  color: var(--primary-color);
+  width: var(--size);
+  height: var(--size);
+  line-height: var(--size);
+  text-align: center;
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+.lightbox-description
+{
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--color);
+  font-weight: bold;
+}
+.lightbox-nav
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  margin-top: 1em;
+  color: #fff;
+  text-transform: uppercase;
+  align-items: center;
+  opacity: 0.8;
+}
+.nav-button
+{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5em;
+}
