@@ -50,7 +50,21 @@ APARECER ELEMENTOS
 {
   0%
   {
-    transform: translate(0, 100%);
+    transform: translate(0, 20%);
+  }
+}
+@keyframes mover-right
+{
+  0%
+  {
+    transform: translate(20%);
+  }
+}
+@keyframes mover-left
+{
+  0%
+  {
+    transform: translate(-20%);
   }
 }
 

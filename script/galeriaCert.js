@@ -6,7 +6,7 @@ window.addEventListener('load', function()
 });
 
 //GALERIA
-var gallery = document.getElementsByTagName('img');
+var gallery = document.getElementById('gallery-container').getElementsByTagName('img');
 var swiper;
 
 for(var i = 0; i < gallery.length;i++ )
