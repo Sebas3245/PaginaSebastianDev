@@ -176,11 +176,19 @@ HEADER
 **********/
 header
 {
-  background-color: #0a212e;
+  padding-top: 15px;
+  background-color: rgba(10, 33, 46, 0.541);
   display: flex;
   flex-direction: row;
-  padding: 20px 0;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.63);
+  background: linear-gradient(to bottom,
+  rgba(10, 33, 46, 0.945),
+  rgba(10, 33, 46, 0.945)
+  ), url("/imgCert/banner.png");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 header .volver
 {
@@ -195,6 +203,7 @@ header .volver a:hover
 }
 .title
 {
+  font-weight: bold;
   font-size: 3em;
   color: #fff;
   width: 60%;
@@ -203,12 +212,13 @@ header .volver a:hover
 .title span
 {
   color: #005a8a;
+  font-weight: bolder;
 }
 .logo
 {
   width: 20%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .logo img
@@ -216,7 +226,34 @@ header .volver a:hover
   height: 40px;
   vertical-align: top;
 }
-
+.btn-comenzar
+{
+  width: 100%;
+  display:flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+.btn-comenzar>a
+{
+  display: flex;
+  flex-direction: column;
+  color: #d0d8e7;
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-shadow: 3px 2px rgba(0, 0, 0, 0.671);
+  letter-spacing: 1.5px;
+  animation: animComen 1.5s infinite alternate;
+}
+@keyframes animComen
+{
+  0%{
+    transform: translate(0, -30%);
+  }
+}
 /*************
 ESTILOS GALERIA 
 **************/
@@ -233,10 +270,11 @@ ESTILOS GALERIA
 {
   width: 100%;
   height: 300px;
-  background: var(--primary-color);
+  background: #d0d8e7;
   display: flex;
   justify-content: center;
   align-items: center;
+    flex-direction: column;
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.63);
@@ -245,9 +283,14 @@ ESTILOS GALERIA
 {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 90%;
   object-fit: cover;
   transition: all .5s;
+}
+.gallery-item span
+{
+  color: rgb(85, 84, 84);
+  height: 10%;
 }
 
 /************

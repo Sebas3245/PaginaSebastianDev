@@ -92,3 +92,12 @@ function aparecerElementos()
     }
   }
 }
+
+//SCROLL COMENZAR
+$('#enlace-comenzar').on('click', function(e)
+    {
+        e.preventDefault();
+        $('html , body').animate({
+          scrollTop: $('.gallery-item').offset().top-20
+        },600);
+    });
