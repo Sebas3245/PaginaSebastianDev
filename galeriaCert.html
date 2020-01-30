@@ -2,32 +2,105 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Galeria</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/galeriaStyle.css">
 </head>
-<body>
+<body class="hidden">
+  <div class="centrado" id="onload">
+    <div class="lds-roller"><div></div><div></div><div></div><div></div></div></div>
+  </div>
+  <header>
+    <div class="volver"><a href="#"><img src="imgCert/salida.png" alt=""></a></div>
     <h1 class="title">Galeria de <span>Certificados</span></h1>
-    <div class="galeria-container" id="gallery-container">
-        <div class="gallery-item"><img src="img/cert-1-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-2-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-3-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-4-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-5-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-6-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-7-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-8-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-9-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-10-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-11-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-12-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-13-thumb.jpg" alt="desc" class="gallery-img"></div>
-        <div class="gallery-item"><img src="img/cert-14-thumb.png" alt="desc" class="gallery-img"></div>
+    <div class="logo">
+      <img src="img/logo.png" alt="">
     </div>
-    <script src="script/galeriaCert.js"></script>
-    <script>
-        lightbox(document.getElementById('gallery-container'));
-    </script>
+  </header>
+  <div class="galeria-container" id="gallery-container">
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-1-thumb.jpg" id="0" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-2-thumb.jpg" id="1" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-3-thumb.jpg" id="2" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-4-thumb.jpg" id="3" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-5-thumb.jpg" id="4" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-6-thumb.jpg" id="5" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-7-thumb.jpg" id="6" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-8-thumb.jpg" id="7" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-9-thumb.jpg" id="8" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-10-thumb.jpg" id="9" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-11-thumb.jpg" id="10" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-12-thumb.jpg" id="11" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-13-thumb.jpg" id="12" class="gallery-img"></div>
+      <div class="gallery-item mover" tipo-mov="mover-down"><img src="imgCert/cert-14-thumb.png" id="13" class="gallery-img"></div>
+  </div>
+  <footer>
+    <div class="footer-arriba">
+      <div class="marca-logo">
+        <img src="img/logo.png" alt="">
+      </div>
+      <div class="contacto-footer">
+        <h4>Contactanos en</h4>
+        <span>
+          <img class="fab" src="img/skype.png" alt="">
+          <a href="skype:jsebastianlara3245@gmail.com?call">Sebastian Lara</a>
+        </span>
+        <span>
+          <img class="fab" src="img/correo.png" alt="">
+          <a href="mailto:jsebastianlara3245@gmail.com">jsebastianlara3245@gmail.com</a>
+        </span>
+        <span>
+          <img class="fab" src="img/whatsapp.png" alt="">
+          <a href="tel:+573043981250">+57 3043981250</a>
+        </span>
+      </div>
+      <div class="redes-footer">
+        <h4>Siguenos en</h4>
+        <a target="_blank" href="https://www.facebook.com/"><img class="fab" src="img/facebook.png" alt=""></a>
+        <a target="_blank" href="https://twitter.com/home"><img class="fab" src="img/twitter.png" alt=""></a>
+        <a target="_blank" href="https://www.instagram.com/"><img class="fab" src="img/instagram.png" alt=""></a>
+      </div>
+    </div>
+    <p>© 2020 Sebastian Lara</p>
+  </footer>
+  <div class="modal" id="modal">
+    <div class="flexModal" id="flexModal">
+      <span class="close"><a href="#"><img src="imgCert/fullscreen.png" alt=""></a></span>
+      <div class="contenidoModal">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide slide-1"></div>
+              <div class="swiper-slide slide-2"></div>
+              <div class="swiper-slide slide-3"></div>
+              <div class="swiper-slide slide-4"></div>
+              <div class="swiper-slide slide-5"></div>
+              <div class="swiper-slide slide-6"></div>
+              <div class="swiper-slide slide-7"></div>
+              <div class="swiper-slide slide-8"></div>
+              <div class="swiper-slide slide-9"></div>
+              <div class="swiper-slide slide-10"></div>
+              <div class="swiper-slide slide-11"></div>
+              <div class="swiper-slide slide-12"></div>
+              <div class="swiper-slide slide-13"></div>
+              <div class="swiper-slide slide-14"></div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </div>   
+  </div>
+  <script src="script/swiper.min.js"></script>
+  <script src="script/jquery.js"></script>
+  <script src="script/galeriaCert.js"></script>
 </body>
 </html>

@@ -1,116 +1,94 @@
-//OBTENEMOS GALERIA DE IMAGENES
-const getImages = container => [...container.querySelectorAll('img')];
+//PRE-LOADER
+window.addEventListener('load', function()
+{
+  $('#onload').fadeOut();
+  $('body').removeClass('hidden');
+});
 
-//OBTENER UN ARRAY DE LAS RUTAS DE LAS IMAGENES GRANDES
-const getLargeImages = gallery => gallery
-                                    .map( el => el.src)
-                                    .map( el => el.replace('thumb', 'large'));
+//GALERIA
+var gallery = document.getElementsByTagName('img');
+var swiper;
 
-//OBTENER DESCRIPCIONES DE IMAGENES
-const getDescriptions = gallery => gallery.map (el => el.alt);
+for(var i = 0; i < gallery.length;i++ )
+{
+    gallery[i].addEventListener('click', function()
+    {
+        var id = this.getAttribute('id');
+        console.log(id);
+        swiper = new Swiper('.swiper-container', {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          initialSlide: id,
+          updateOnWindowResize: true,
+          slidesPerView: 'auto',
+          //loop: true, 
 
-//CAPTURAR EL EVENTO CLICK EN LA GALERIA PARA ABRIR EL LIGHTBOX
-const openLightboxEvent = (container,gallery,larges,descriptions) =>{
-    container.addEventListener('click', e =>{
-        let el = e.target,
-        i = gallery.indexOf(el);
-        if(el.tagName === 'IMG')
-        {
-            openLightbox(gallery, i, larges,descriptions);
-        }
-    })
+          //MANEJAR CON FLECHAS
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+
+          //PAGINACION
+          pagination: {
+            el: '.swiper-pagination',
+          },
+   
+          // NAVEGACION
+         navigation: {
+           nextEl: '.swiper-button-next',
+           prevEl: '.swiper-button-prev',
+         },
+        });
+
+        location.href="#modal";
+    });
 }
+//CERRAR GALERIA AL HACER CLICK EN CUALQUIER PARTE
+let flex = document.getElementById('flexModal');
 
-//Imprimir overlay del lightbox en el body
-const openLightbox = (gallery,i,larges,descriptions) =>{
-    let lightboxElement = document.createElement('div');
-        lightboxElement.innerHTML = `
-        <div class="lightbox-overlay">
-            <figure class="lightbox-container">
-                <div class="close-modal">\u2716</div>
-                <img src="${larges[i]}" class="lightbox-img">
-                <figcaption>
-                    <p class="lightbox-description">${descriptions[i]}</p>
-                    <nav class="lightbox-nav">
-                        <a href="#" class="nav-button prev">\u2B9C</a>
-                        <span class="nav-counter">Imagen ${i + 1} de ${gallery.length}</span>
-                        <a href="#" class="nav-button next">\u2B9E</a>
-                    </nav>
-                </figcaption>
-            </figure>
-        </div>
-        `
+window.addEventListener('click', function(e)
+{
+  if(e.target == flex)
+  {
+    window.location = '#'
+    swiper.destroy(true, false);
+  }
+});
 
-        lightboxElement.id = 'lightbox';
-        document.body.appendChild(lightboxElement);
-        closeModal(lightboxElement);
-        navigateLightbox(lightboxElement,i,larges,descriptions);
-};
 
-//CERRAR MODAL
-const closeModal = modalElement => {
-    let closeModal = modalElement.querySelector('.close-modal')
-    closeModal.addEventListener('click', e => {
-        e.preventDefault();
-        document.body.removeChild(modalElement);
-    })
+// ANIMACION 
+window.addEventListener('load', function()
+{
+  aparecerElementos();
+});
+
+window.addEventListener('scroll', function()
+{
+  aparecerElementos();
+});
+
+let mover = document.getElementsByClassName('mover');
+
+function aparecerElementos()
+{
+  let desplazamiento_actual = window.pageYOffset;
+
+  for(var i=0;i<mover.length;i++)
+  {
+    var tipoMov = $(mover[i]).attr('tipo-mov');
+
+    if(desplazamiento_actual<mover[i].offsetTop-700)
+    {
+      mover[i].style.removeProperty('animation');
+      mover[i].style.opacity = '0';
+    }
+
+    if(desplazamiento_actual > mover[i].offsetTop - 500)
+    {
+      mover[i].style.animation = ""+tipoMov+" 1s ease-out";
+      mover[i].style.opacity = '1';
+    }
+  }
 }
-
-//NAVEGAR EN EL MODAL
-const navigateLightbox = (lightboxElement,i,larges,descriptions) =>{
-    let prevButton = lightboxElement.querySelector('.prev'),
-        nextButton = lightboxElement.querySelector('.next'),
-        image = lightboxElement.querySelector('img'),
-        description = lightboxElement.querySelector('p'),
-        counter = lightboxElement.querySelector('span'),
-        closeButton = lightboxElement.querySelector('.close-modal');
-    
-    window.addEventListener('keyup', e => {
-        if(e.key === 'ArrowRight') nextButton.click();
-        if(e.key === 'ArrowLeft') prevButton.click();
-        if(e.key === 'Escape') closeButton.click();  
-    })
-
-    lightboxElement.addEventListener('click', e =>{
-        e.preventDefault();
-        let target = e.target;
-
-        if(target === prevButton)
-        {
-            if( i > 0)
-            {
-                image.src = larges [i - 1]
-                i--;
-            }
-            else
-            {
-                image.src = larges [larges.length - 1];
-                i = larges.length - 1;
-            }
-        }
-        else if(target === nextButton)
-        {
-            if( i < larges.length - 1)
-            {
-                image.src = larges [i + 1];
-                i++;
-            }
-            else
-            {
-                image.src = larges [0];
-                i = 0;
-            }
-        }
-
-        description.textContent = descriptions[i];
-        counter.textContent = `Imagen ${i + 1} de ${larges.length}`;
-    })
-};
-
-const lightbox = container => {
-    let images = getImages(container),
-        larges = getLargeImages(images),
-        descriptions = getDescriptions(images);
-        openLightboxEvent(container,images,larges,descriptions);
-}
-
