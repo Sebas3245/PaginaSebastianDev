@@ -393,12 +393,13 @@ SLIDER
 {
   width: 654px;
   height: 500px;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
 }
 .swiper-container .swiper-wrapper .slide-1
 {
-  background-image: url(/imgCert/cert-1-thumb.jpg);
+  background-image: url(/imgCert/cert-1-thumb.png);
 }
 .swiper-container .swiper-wrapper .slide-2
 {
@@ -438,7 +439,7 @@ SLIDER
 }
 .swiper-container .swiper-wrapper .slide-11
 {
-  background-image: url(/imgCert/cert-11-thumb.jpg);
+  background-image: url(/imgCert/cert-11-thumb.png);
 }
 .swiper-container .swiper-wrapper .slide-12
 {
@@ -450,7 +451,11 @@ SLIDER
 }
 .swiper-container .swiper-wrapper .slide-14
 {
-  background-image: url(/imgCert/cert-14-thumb.png);
+  background-image: url(/imgCert/cert-14-thumb.jpg);
+}
+.swiper-container .swiper-wrapper .slide-15
+{
+  background-image: url(/imgCert/cert-15-thumb.jpg);
 }
 
 /**********
