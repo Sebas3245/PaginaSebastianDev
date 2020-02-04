@@ -1,3 +1,4 @@
-poner fotos que faltan
-hacer pagina de leer mas 
-hacer boton de primer comentario
+Hacer slidebar menu responsive
+hacer contratar de la pagina obtener
+Corregir error al presional por debajo de portafolio en el nav
+Arreglar letras del banner

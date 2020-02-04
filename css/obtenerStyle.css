@@ -232,8 +232,9 @@ TABLA PRECIOS
 .tabla
 {
     width: 33%;
-    height: 550px;
+    height: 560px;
     margin: auto;
+    background-color: rgb(255, 242, 242);
     border: 1px solid #343759;
     border-radius: 4px;
     box-shadow: 0px 0px 4px 0px #343759;
@@ -253,7 +254,7 @@ TABLA PRECIOS
 .tabla img
 {
   width: 64px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .tabla>h3
 {
@@ -266,10 +267,12 @@ TABLA PRECIOS
   text-align: left;
   display: block;
   margin-bottom: 20px;
-  height: 150px;
+  height: 170px;
 }
 .boton
 {
+    outline: none;
+    border: none;
     display: inline-block;
     width: 150px;
     padding: 12px;
@@ -288,6 +291,7 @@ TABLA PRECIOS
   box-shadow: 0px 0px 4px 0px rgb(99, 99, 99);
   color: #000000;
   transition: .5s all;
+  cursor: pointer;
 }
 .tabla:hover
 {
@@ -370,6 +374,102 @@ footer p
   text-align: center;
 }
 
+
+/*************
+VENTANA MODAL
+**************/
+.modal
+{
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  transition: opacity 0.35s ease;
+}
+.flexModal
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .contenidoModal
+{
+  transform: translate(0,-100%);
+  background-color: #343759;
+  width: 30%;
+  height: 100px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.555);
+  display: flex;
+  flex-direction: column;
+}
+.contenidoModal span
+{
+  margin-right: 2%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.contenidoModal span>a
+{
+  color: #888dce;
+}
+.contenidoModal span>a:hover
+{
+  color: #6971e2;
+}
+.contenidoModal form
+{
+  background-color: azure;
+  padding: 5px 20px;
+}
+.contenidoModal form>h3
+{
+  font-size: 16px;
+}
+.contenidoModal form>input
+{
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom:1px solid rgb(136, 136, 136) ;
+}
+.contenidoModal form>input:focus
+{
+  transition: all .5s ease;
+  border-bottom:1px solid rgb(66, 66, 66) ;
+}
+.contenidoModal form>button
+{
+  border: none;
+  outline: none;
+  background-color: #343759;
+  padding: 3px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: azure;
+}
+.contenidoModal form>button:hover
+{
+  background-color: #52557e;
+  color: azure;
+}
+.modal:target
+{
+  opacity: 1;
+  top: 0;
+}
+.modal:target .contenidoModal
+{
+  transform: translate(0,0);
+  transition: transform 0.35s ease;
+}
+
 @media screen and (max-width: 1000px)
 {
     .tabla
@@ -395,6 +495,10 @@ footer p
     .tabla > h2
     {
         margin-top: 40px;
+    }
+    .modal .contenidoModal
+    {
+      width: 80%;
     }
 }
 @media screen and (max-width: 500px)

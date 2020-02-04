@@ -182,7 +182,7 @@ window.addEventListener('click', function(e)
 {
   if(e.target == flex)
   {
-    window.location = '#cuerpo'
+    window.location = '#contacto'
     $('#modalMensaje').css({'transform':'scale(0,0)'}); 
   }
 });

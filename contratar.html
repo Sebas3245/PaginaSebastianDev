@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-  <title>Obtener Servicios</title>
+  <title>Contratar Servicios</title>
 </head>
 <body>
   <header>
@@ -18,15 +18,15 @@
       </div>
     </div>
     </div>
-    <div class="volver"><a href="index.html"><img src="imgCert/salida.png" alt=""></a></div>
+    <div class="volver"><a href="index.html#comunicado1"><img src="imgCert/salida.png" alt=""></a></div>
     <div class="title">
-      <p>Obtener <span>Servicios</span></p>
+      <p>Contratar <span>Servicios</span></p>
     </div>
     <div class="logo">
       <img src="img/logo.png" alt="">
     </div>
   </header>
-  <div class="contenedor">
+  <div class="contenedor" id="tablascont">
     <div class="tabla">
       <h2>App de Escritorio</h2>
       <div class="estrellas">
@@ -38,7 +38,7 @@
       <img src="img/obtener1.png" alt="">
       <h3><sup>$</sup>100.000</h3>
       <p>Aplicaciones de Escritorio en el lenguaje Orientado a objetos Java con conexion a Base de datos en MySQL, aplicaciones de negeocios.</p>
-      <a href="" class="boton">Contratar</a>
+      <a href="#envCorreo" tipo-contrato="App de Escritorio" class="boton">Contratar</a>
     </div>
     <div class="tabla">
       <h2>Sitio Web</h2>
@@ -51,8 +51,8 @@
       </div>
       <img src="img/obtener3.png" alt="">
       <h3><sup>$</sup>100.000</h3>
-      <p>Sitios Web en lenguajes: Javascript & PHP, frameworks como React.js con Node.js & Socket.io WebSockets en Back-End, uso de JQuery, Ajax, JSON, HTML, CSS, SCSS & Bootstrap, sitios Responsive</p>
-      <a href="" class="boton">Contratar</a>
+      <p>Sitios Web en lenguajes: Javascript & PHP, frameworks como React.js con Node.js & Socket.io WebSockets en Back-End, uso de JQuery, Ajax, JSON, HTML, CSS, SCSS & Bootstrap, sitios Responsive, conectado a MySQL o MongoDB</p>
+      <a href="#envCorreo" tipo-contrato="Sitio Web" class="boton">Contratar</a>
     </div>
     <div class="tabla">
       <h2>App Movil</h2>
@@ -63,8 +63,8 @@
       </div>
       <img src="img/obtener2.png" alt="">
       <h3><sup>$</sup>100.000</h3>
-      <p>Aplicaciones Moviles en los lenguajes: Java o Kotlin para Android</p>
-      <a href="" class="boton">Contratar</a>
+      <p>Aplicaciones Moviles en los lenguajes: Java o Kotlin para Android, conectado a MySQL o MongoDB</p>
+      <a href="#envCorreo" tipo-contrato="App Movil" class="boton">Contratar</a>
     </div>
   </div>
   <footer>
@@ -96,14 +96,20 @@
     </div>
     <p>© 2020 Sebastian Lara</p>
   </footer>
+  <div class="modal" id="envCorreo">
+    <div class="flexModal" id="flexModal">
+      <div class="contenidoModal" id="contentModal">
+        <span><a href="#tablascont" id="closeMensajeM">&times;</a></span>
+          <form>
+            <h3 id="textoEnvCorreo"></h3>
+            <input type="text" id="correotxt" placeholder="Ingrese correo">
+            <button type="button" id="envCorreo">Enviar</button>
+          </form> 
+      </div>
+    </div>
+  </div>
   <script src="https://kit.fontawesome.com/0e3f4ec1b5.js" crossorigin="anonymous"></script>
   <script src="script/jquery.js"></script>
-  <script>
-    window.addEventListener('load', function()
-    {
-      $('#onload').fadeOut();
-      $('body').removeClass('hidden');
-    });
-  </script>
+  <script src="script/observicios.js"></script>
 </body>
 </html>
