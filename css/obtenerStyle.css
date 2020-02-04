@@ -20,12 +20,12 @@
 {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 body
 {
-  font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #d8d8d8;
+    background-color: #dfe2df;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 body::-webkit-scrollbar
 {
@@ -38,34 +38,6 @@ body::-webkit-scrollbar-thumb
 a
 {
   text-decoration: none;
-}
-/***************
-APARECER ELEMENTOS
-*****************/
-.mover
-{
-  opacity: 0;
-}
-@keyframes mover-down
-{
-  0%
-  {
-    transform: translate(0, 20%);
-  }
-}
-@keyframes mover-right
-{
-  0%
-  {
-    transform: translate(20%);
-  }
-}
-@keyframes mover-left
-{
-  0%
-  {
-    transform: translate(-20%);
-  }
 }
 
 /****************
@@ -176,7 +148,7 @@ HEADER
 **********/
 header
 {
-  padding-top: 15px;
+  padding: 15px 0;
   background-color: rgba(10, 33, 46, 0.541);
   display: flex;
   flex-direction: row;
@@ -186,7 +158,6 @@ header
   rgba(10, 33, 46, 0.945)
   ), url("/imgCert/banner.png");
   background-attachment: fixed;
-  
   background-size: cover;
   background-repeat: no-repeat;
   animation: animHeader 5s infinite alternate;
@@ -243,214 +214,87 @@ header .volver a:hover
   height: 40px;
   vertical-align: top;
 }
-.btn-comenzar
-{
-  width: 100%;
-  display:flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  text-align: center;
-}
-.btn-comenzar>a
-{
-  display: flex;
-  flex-direction: column;
-  color: #d0d8e7;
-  margin-top: 10px;
-  font-size: 20px;
-  font-family: 'Open Sans Condensed', sans-serif;
-  text-shadow: 3px 2px rgba(0, 0, 0, 0.671);
-  letter-spacing: 1.5px;
-  animation: animComen 1.5s infinite alternate;
-}
-@keyframes animComen
-{
-  0%{
-    transform: translate(0, -30%);
-  }
-}
-/*************
-ESTILOS GALERIA 
-**************/
-.galeria-container
-{
-  padding: 2em;
-  max-width: 1200px;
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 1.5em;
-}
-.gallery-item
-{
-  width: 100%;
-  height: 300px;
-  background: #d0d8e7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    flex-direction: column;
-  overflow: hidden;
-  cursor: pointer;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.63);
-}
-.gallery-img
-{
-  display: block;
-  width: 100%;
-  height: 90%;
-  object-fit: cover;
-  transition: all .5s;
-}
-.gallery-item span
-{
-  color: rgb(85, 84, 84);
-  height: 10%;
-}
 
 /************
-EFECTO HOVER
+TABLA PRECIOS
 *************/
-.gallery-item::before
+.contenedor
 {
-  content: url("/imgCert/ojo.png");
-  position: absolute;
-  transform: scale(0.1);
-  opacity: 0;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
-.gallery-item:hover .gallery-img
+.tabla
 {
-  transform: scale(1.2);
-  filter: blur(3px);
-  opacity: 0.4;
+    width: 33%;
+    height: 550px;
+    margin: auto;
+    border: 1px solid #343759;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px 0px #343759;
+    padding: 60px;
+    text-align: center;
+    flex-grow: 1; /* PEGA LAS TABLAS */
+    color: #343759; 
 }
-.gallery-item:hover::before
+.tabla>h2
 {
-  opacity: 1;
+  font-size: 30px;
 }
-
-/************
-MODAL
-************/
-.modal
+.tabla .estrellas
 {
-  position: fixed;
-  top: -100vh;
-  left: 0;
-  z-index: 4;
-  background: rgba(0, 0, 0, 0.75);
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 0.35s ease;
+  margin-bottom: 35px;
 }
-.flexModal
+.tabla img
 {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
+  width: 64px;
+  margin-bottom: 20px;
 }
-.flexModal .close
+.tabla>h3
 {
-  margin-top: 10px;
+  text-decoration: line-through; /* ESTO ES TEMPORAL */
+  font-size: 30px;
+  margin-bottom: 20px;
 }
-.flexModal .close a:hover img
+.tabla >p
 {
-  content: url(/imgCert/centro.png);
+  text-align: left;
+  display: block;
+  margin-bottom: 20px;
+  height: 150px;
 }
-.modal .contenidoModal
+.boton
 {
-  position: fixed;
-  top: 50px;
-  transform: scale(0,0);
-  transition: transform 0.35s ease;
-  width: 100%;
-  display: flex;
+    display: inline-block;
+    width: 150px;
+    padding: 12px;
+    background: rgb(44, 95, 136);
+    text-decoration: none;
+    color: #f1f2ff;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin: auto;
 }
-.modal:target
+.boton:hover
 {
-  opacity: 1;
-  top: 0;
+  background: rgb(214, 236, 255);
+  box-shadow: 0px 0px 4px 0px rgb(99, 99, 99);
+  color: #000000;
+  transition: .5s all;
 }
-.modal:target .contenidoModal
+.tabla:hover
 {
-  transform: scale(1,1);
-  transition: transform 0.35s ease;
-}
-
-/**********
-SLIDER
-************/
-.swiper-container
-{
-  width: 100%;
-  height: 550px;
-}
-.swiper-container .swiper-slide
-{
-  width: 654px;
-  height: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.swiper-container .swiper-wrapper .slide-1
-{
-  background-image: url(/imgCert/cert-1-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-2
-{
-  background-image: url(/imgCert/cert-2-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-3
-{
-  background-image: url(/imgCert/cert-3-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-4
-{
-  background-image: url(/imgCert/cert-4-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-5
-{
-  background-image: url(/imgCert/cert-5-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-6
-{
-  background-image: url(/imgCert/cert-6-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-7
-{
-  background-image: url(/imgCert/cert-7-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-8
-{
-  background-image: url(/imgCert/cert-8-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-9
-{
-  background-image: url(/imgCert/cert-9-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-10
-{
-  background-image: url(/imgCert/cert-10-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-11
-{
-  background-image: url(/imgCert/cert-11-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-12
-{
-  background-image: url(/imgCert/cert-12-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-13
-{
-  background-image: url(/imgCert/cert-13-thumb.jpg);
-}
-.swiper-container .swiper-wrapper .slide-14
-{
-  background-image: url(/imgCert/cert-14-thumb.png);
+  background: #343759;
+  color: #f1f1f2;
+  transition: .5s all;
+  transform: scale(1.1);
 }
 
 /**********
@@ -525,24 +369,52 @@ footer p
   padding: 5px 0;
   text-align: center;
 }
-@media screen and (max-width: 500px)
+
+@media screen and (max-width: 1000px)
+{
+    .tabla
+    {
+        width: 45%;
+        max-width: none;
+        margin-bottom: 40px;
+        flex-grow: initial;
+    }
+}
+@media screen and (max-width: 700px)
 {
     header .logo
     {
         width: 4%;
         transform: scale(0,0);
     }
+    .tabla
+    {
+        width: 45%;
+        padding: 30px;
+    }
+    .tabla > h2
+    {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 500px)
+{
+    .tabla
+    {
+        width: 85%;
+        padding: 20px;
+    }
     .marca-logo
     {
-    width: 4%;
-    transform: scale(0,0);
+        width: 4%;
+        transform: scale(0,0);
     }
     .contacto-footer
     {
-      width: 70%;
+        width: 70%;
     }
     .redes-footer
     {
-      width: 25%;
+        width: 25%;
     }
 }
