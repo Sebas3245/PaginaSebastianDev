@@ -5,12 +5,41 @@ window.addEventListener('load', function()
   $('body').removeClass('hidden');
 });
 
-//GALERIA
-var gallery = document.getElementById('gallery-container').getElementsByTagName('img');
-var swiper;
-
-for(var i = 0; i < gallery.length;i++ )
+//ALMACENAR EN GALERIA DE CERTIFICADOS
+$(document).ready(function()
 {
+  getCertificados();
+});
+
+var certificadoImg;
+
+function getCertificados()
+{
+  $.getJSON("script/certificados.json",function(cjson)
+  {
+    certificadoImg=cjson;
+    genGaleriaCert(certificadoImg);
+  });
+}
+
+function genGaleriaCert(certificadoImg)
+{
+  $.each(certificadoImg.certificados,function(i,cert) //ciclo
+    {
+    $("#gallery-container").append(`<div class="gallery-item mover" tipo-mov=`+cert.animacion+`>
+      <img src=`+cert.imagen+` id=`+i+` class="gallery-img">
+      <span>Realizado: `+cert.fecha+`</span>
+    </div>`);
+    $('#imagenes-swiper').append(`<div class="swiper-slide slide-`+i+`">
+      <img src=`+cert.imagen+`>
+    </div>`);
+  });
+
+  //GALERIA
+  var gallery = document.getElementById('gallery-container').getElementsByTagName('img');
+  var swiper;
+  for(var i = 0; i < gallery.length;i++ )
+  {
     gallery[i].addEventListener('click', function()
     {
         var id = this.getAttribute('id');
@@ -45,6 +74,13 @@ for(var i = 0; i < gallery.length;i++ )
         location.href="#modal";
     });
 }
+}
+
+
+
+
+
+
 //CERRAR GALERIA AL HACER CLICK EN CUALQUIER PARTE
 let flex = document.getElementById('flexModal');
 

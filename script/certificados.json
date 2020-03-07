@@ -1,0 +1,119 @@
+{
+  "certificados": [
+    {
+      "imagen": "imgCert/cert_jqueryiu-1.png",
+      "fecha": "07/03/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_phpesencial-1.png",
+      "fecha": "07/03/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_sql-1.png",
+      "fecha": "28/02/2020",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_phporientado-1.png",
+      "fecha": "26/02/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_aprendephp-1.png",
+      "fecha": "25/02/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert-htmls&css-avanzado-1.png",
+      "fecha": "20/02/2020",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert-react-1.png",
+      "fecha": "14/02/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert-git-1.png",
+      "fecha": "13/02/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_bootstrap1.png",
+      "fecha": "03/02/2020",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_db_sena-1.png",
+      "fecha": "12/11/2019",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_vars_java-1.png",
+      "fecha": "12/11/2019",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_moviles-1.png",
+      "fecha": "25/10/2019",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_sitios_access-1.png",
+      "fecha": "17/10/2019",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_profesional_java-1.png",
+      "fecha": "24/09/2019",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_crear_pagina_web-1.png",
+      "fecha": "23/09/2019",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_html_css-1.png",
+      "fecha": "21/09/2019",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_fundamentos_java-1.png",
+      "fecha": "12/09/2019",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_desarrollo_php-1.png",
+      "fecha": "23/08/2019",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_diplomado_java.png",
+      "fecha": "30/07/2019",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_metodologia_programacion-1.png",
+      "fecha": "21/07/2019",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_prog_basica-1.png",
+      "fecha": "04/06/2019",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_arquitectura_software-1.png",
+      "fecha": "10/10/2018",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_soporte_tecnico_computo-1.png",
+      "fecha": "03/09/2018",
+      "animacion": "mover-down"
+    }
+  ]
+}
