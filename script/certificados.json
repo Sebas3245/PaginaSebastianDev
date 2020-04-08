@@ -1,6 +1,36 @@
 {
   "certificados": [
     {
+      "imagen": "imgCert/cert_nodejs_avanzado.png",
+      "fecha": "08/04/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_nodejs.png",
+      "fecha": "06/04/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_javascript_avanzado.png",
+      "fecha": "06/04/2020",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_jquery.png",
+      "fecha": "02/04/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_javascript.png",
+      "fecha": "02/04/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_python.png",
+      "fecha": "13/03/2020",
+      "animacion": "mover-right"
+    },
+    {
       "imagen": "imgCert/cert_jqueryiu-1.png",
       "fecha": "07/03/2020",
       "animacion": "mover-left"
