@@ -1,3 +1,0 @@
-Hacer slidebar menu responsive
-Corregir error al presional por debajo de portafolio en el nav
-Arreglar letras del banner
