@@ -19,6 +19,10 @@ GENERAL
   padding: 0;
   box-sizing: border-box;
 }
+html
+{
+  scroll-behavior: smooth;
+}
 body
 {
   font-family: 'Montserrat', sans-serif;
@@ -678,19 +682,21 @@ PORTAFOLIO
 {
   height: 100%;
   width: 100%;
-  object-fit: cover; /*le quita lo apretadas a las imagenes*/
+  object-fit: contain; /*le quita lo apretadas a las imagenes*/
 }
 .img-work img:hover
 {
   box-shadow: 0 0 15px 0 rgba(80, 80, 80, 0.884);
-  transform: scale(1.02 ,1);
+  transform: scale(1.5);
 }
 .textos-work
 {
   height: 10%;
 }
-.textos-work h4
+.textos-work a
 {
+  text-decoration: underline;
+  color: rgb(63, 62, 62);
   line-height: 30px;
   font-weight: 300;
 }

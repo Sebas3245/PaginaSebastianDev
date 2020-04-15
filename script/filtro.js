@@ -24,7 +24,7 @@ function genPortafolio(portafolioImg)
                     <img src=`+porta.imagen+` alt="">
                 </div>
                 <div class="textos-work">
-                    <h4>`+porta.titulo+`</h4>
+                    <a target="_blank" ${ porta.link ? "href='"+porta.link+"'" : ""} >`+porta.titulo+`</a>
                 </div>
             </div>`);
     });
@@ -50,7 +50,7 @@ $(function()
 
 //FILTRO DE SCROLL DEL MENU
 
-    $('#enlace-inicio').on('click', function(e)
+    /* $('#enlace-inicio').on('click', function(e)
     {
         e.preventDefault();
         $('html , body').animate({
@@ -98,5 +98,5 @@ $(function()
         $('html , body').animate({
               scrollTop: $('#equipo').offset().top-100
         },600);
-    });
+    }); */
 });

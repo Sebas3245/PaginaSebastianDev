@@ -84,7 +84,7 @@ window.setInterval(function()
     $(txt1).removeClass('t1-1');
     $(txt1).addClass('t1-2');
 
-    txt2.innerHTML = "Somos un equipo de desarrollo de software en diferentes areas como Sitios web / Aplicaciones de Escritorio / Aplicaciones Moviles, segun lo requerido por el cliente.";
+    txt2.innerHTML = "Desarrollador de software Freelancer en diferentes areas como Sitios web / Aplicaciones de Escritorio / Aplicaciones Moviles, segun lo requerido por el cliente.";
     $(txt2).removeClass('t2-1');
     $(txt2).addClass('t2-2');
   }
@@ -96,7 +96,7 @@ window.setInterval(function()
     $(txt1).removeClass('t1-2');
     $(txt1).addClass('t1-1');
 
-    txt2.innerHTML = "Equipo de desarrollo";
+    txt2.innerHTML = "Desarrollador Freelancer";
     $(txt2).removeClass('t2-2');
     $(txt2).addClass('t2-1');
   }
