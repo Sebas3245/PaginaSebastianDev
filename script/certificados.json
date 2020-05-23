@@ -1,6 +1,36 @@
 {
   "certificados": [
     {
+      "imagen": "imgCert/cer_prog_basica_diana.jpg",
+      "fecha": "23/05/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_pro_python.jpg",
+      "fecha": "13/05/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert-profesional-js.jpg",
+      "fecha": "30/04/2020",
+      "animacion": "mover-right"
+    },
+    {
+      "imagen": "imgCert/cert_diplomado_php.png",
+      "fecha": "22/04/2020",
+      "animacion": "mover-left"
+    },
+    {
+      "imagen": "imgCert/cert_react_native.jpg",
+      "fecha": "20/04/2020",
+      "animacion": "mover-down"
+    },
+    {
+      "imagen": "imgCert/cert_react_esencial.jpg",
+      "fecha": "10/04/2020",
+      "animacion": "mover-right"
+    },
+    {
       "imagen": "imgCert/cert_nodejs_avanzado.png",
       "fecha": "08/04/2020",
       "animacion": "mover-left"
