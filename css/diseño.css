@@ -683,11 +683,12 @@ PORTAFOLIO
   height: 100%;
   width: 100%;
   object-fit: contain; /*le quita lo apretadas a las imagenes*/
+  cursor: pointer;
 }
 .img-work img:hover
 {
   box-shadow: 0 0 15px 0 rgba(80, 80, 80, 0.884);
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .textos-work
 {
@@ -1021,13 +1022,13 @@ VENTANA MODAL
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.555);
   display: flex;
 }
-.close
+.modal .close
 {
   color: #616161;
   font-size: 30px;
   font-weight: bold;
 }
-.close:hover
+.modal .close:hover
 {
   color: rgb(49, 49, 49);
   text-decoration: none;
@@ -1173,4 +1174,74 @@ MODAL MENSAJE ENVIADO
   text-align: center;
   background-color: rgba(240, 255, 255, 0.863);
   padding: 10px 15px;
+}
+
+
+/************
+MODAL PORTAFOLIO Y SWIPER
+************/
+.modalPort
+{
+  position: fixed;
+  top: -100vh;
+  left: 0;
+  z-index: 4;
+  background: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.flexModalPort
+{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.flexModalPort .close
+{
+  margin-top: 10px;
+}
+.flexModalPort .close a:hover img
+{
+  content: url(/imgCert/centro.png);
+}
+.modalPort .contenidoModalPort
+{
+  position: fixed;
+  top: 50px;
+  transform: scale(0,0);
+  transition: transform 0.35s ease;
+  width: 100%;
+  display: flex;
+}
+.modalPort:target
+{
+  opacity: 1;
+  top: 0;
+}
+.modalPort:target .contenidoModalPort
+{
+  transform: scale(1,1);
+  transition: transform 0.35s ease;
+}
+/**********
+SLIDER
+************/
+.swiper-container
+{
+  width: 100%;
+  height: 550px;
+}
+.swiper-container .swiper-slide
+{
+  width: 654px;
+  height: 500px;
+}
+.swiper-slide img
+{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
