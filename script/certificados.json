@@ -1,11 +1,6 @@
 {
   "certificados": [
     {
-      "imagen": "imgCert/cer_prog_basica_diana.jpg",
-      "fecha": "23/05/2020",
-      "animacion": "mover-left"
-    },
-    {
       "imagen": "imgCert/cert_pro_python.jpg",
       "fecha": "13/05/2020",
       "animacion": "mover-down"
