@@ -171,4 +171,12 @@
     width: 554px;
     height: 300px;
   }
+  .posters>img
+  {
+    width: 100%;
+  }
+  .posters .content-poster
+  {
+    width: 100%;
+  }
 }

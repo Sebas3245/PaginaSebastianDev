@@ -5,7 +5,7 @@ GENERAL
 {
   --color1: rgb(9, 73, 78);
   --color2: rgba(23,180,83,.0788);
-  --color3: rgba(11,94,211,.623);
+  --color3: rgba(4, 72, 167, 0.849);
   --color4: #292931;
   --fondo: #f2f2f2;
   --titulos: 33px;
@@ -762,6 +762,105 @@ EXPERIENCIA
   border-color: var(--color1);
   color: #fff;
 }
+/************
+Poster 1 Diseño Web
+*************/
+.posters
+{
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: var(--margenes) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 20px 0;
+}
+.posters>img
+{
+  border-radius: 5px;
+  width: 50%;
+ 
+}
+.posters .content-poster
+{
+  width: 50%;
+  text-align: justify;
+  padding: 40px;
+}
+.posters .content-poster h2
+{
+  color: var(--color3);
+  margin-bottom: 20px;
+}
+.posters .content-poster p
+{
+  margin-bottom: 20px;
+}
+.posters .content-poster img
+{
+  width: 10%;
+  margin: 10px 4%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+
+/* SPA poster */
+.spa-poster
+{
+  background-color: #7358f0;
+}
+.spa-poster .content-poster h2
+{
+ color: #fff;
+}
+.spa-poster .content-poster p
+{
+  color: rgb(202, 200, 200);
+}
+
+/* APP poster */
+.app-poster
+{
+  background-color: #11001b;
+}
+.app-poster .content-poster h2
+{
+ color: #fff;
+}
+.app-poster .content-poster p
+{
+  color: rgb(202, 200, 200);
+}
+
+/* Rest Poster */
+.rest-poster
+{
+  background-color: #1071bd;
+}
+.rest-poster .content-poster h2
+{
+ color: #fff;
+}
+.rest-poster .content-poster p
+{
+  color: rgb(202, 200, 200);
+}
+
+/* Jest Poster */
+.jest-poster
+{
+  background-color: #282a37;
+}
+.jest-poster .content-poster h2
+{
+ color: #fff;
+}
+.jest-poster .content-poster p
+{
+  color: rgb(202, 200, 200);
+}
+
 /************
 Comunicado
 *************/
