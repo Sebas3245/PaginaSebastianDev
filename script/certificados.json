@@ -1,14 +1,19 @@
 {
   "certificados": [
     {
+      "imagen": "imgCert/cert_mysql.png",
+      "fecha": "07/10/2020",
+      "animacion": "mover-down"
+    },
+    {
       "imagen": "imgCert/cert_angular.png",
       "fecha": "02/10/2020",
-      "animacion": "mover-left"
+      "animacion": "mover-right"
     },
     {
       "imagen": "imgCert/cert_laravel.png",
       "fecha": "02/10/2020",
-      "animacion": "mover-down"
+      "animacion": "mover-left"
     },
     {
       "imagen": "imgCert/cert_pro_python.jpg",
