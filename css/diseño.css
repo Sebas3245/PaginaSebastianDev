@@ -212,7 +212,7 @@ header
   0%, 33%
   {
     background-image: linear-gradient(to left,black, #0672d036),
-    url("/img/dofon.jpg"); 
+    url("img/dofon.jpg"); 
     opacity: 1;  
   }
   33.32%, 33.33%
@@ -226,7 +226,7 @@ header
   36%, 66.66%
   {
     background-image: linear-gradient(to left,black, #0672d036),
-    url("/img/dofon3.jpg");
+    url("img/dofon3.jpg");
     opacity: 1;
   }
   67%, 68%
@@ -236,7 +236,7 @@ header
   69%, 100%
   {
     background-image: linear-gradient(to left,black, #0672d036),
-    url("/img/dofon4.jpg");
+    url("img/dofon4.jpg");
     opacity: 1;
   }
 }
@@ -595,7 +595,7 @@ SERVICIOS
 *********/
 .servicios-fondo
 {
-  background: url("/img/fondo3.jpg");
+  background: url("img/fondo3.jpg");
   background-position: center;
   background-size: cover;
   height: auto;
@@ -870,7 +870,7 @@ Comunicado
 *************/
 .comunicado1-fondo
 {
-  background-image: url("/img/dofoncomunicado.jpg");
+  background-image: url("img/dofoncomunicado.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1144,7 +1144,7 @@ VENTANA MODAL
   rgba(49, 49, 49, 0.6),
   rgba(44, 83, 141, 0.6),
   rgba(7,109,150, .45)
-  ), url("/img/modaldofon.jpg");
+  ), url("img/modaldofon.jpg");
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -1308,7 +1308,7 @@ MODAL PORTAFOLIO Y SWIPER
 }
 .flexModalPort .close a:hover img
 {
-  content: url(/imgCert/centro.png);
+  content: url(imgCert/centro.png);
 }
 .modalPort .contenidoModalPort
 {
