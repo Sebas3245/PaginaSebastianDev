@@ -16,47 +16,58 @@ var swiper;
 
 function genPortafolio(portafolioImg) {
   let hash = {};
-  let setImages = portafolioImg.portafolio.filter(port => hash[port.titulo] ? false : hash[port.titulo] = true);
+  let setImages = portafolioImg.portafolio.filter((port) =>
+    hash[port.titulo] ? false : (hash[port.titulo] = true)
+  );
 
   setImages.map((porta, i) => {
-    $("#galeria-work").append(`<div class="cont-work ` + porta.dataNombre + `">
+    $("#galeria-work").append(
+      `<div class="cont-work ` +
+        porta.dataNombre +
+        `">
       <div class="img-work">
         <img src="${porta.imagen}" id="${i}" dataTitle="${porta.titulo}" alt="">
       </div>
       <div class="textos-work">
-        <a target="_blank" ${porta.link ? "href='" + porta.link + "'" : ""} >` + porta.titulo + `</a>
+        <a target="_blank" ${porta.link ? "href='" + porta.link + "'" : ""} >` +
+        porta.titulo +
+        `</a>
       </div>
-    </div>`);
+    </div>`
+    );
   });
 
   //Portafolio click
-  var gallery = document.getElementById('galeria-work').getElementsByTagName('img');
+  var gallery = document
+    .getElementById("galeria-work")
+    .getElementsByTagName("img");
 
   for (var i = 0; i < gallery.length; i++) {
-    gallery[i].addEventListener('click', function () {
-      var dataTitle = this.getAttribute('dataTitle');
-      
-      let imgs = portafolioImg.portafolio.filter(img => img.titulo === dataTitle);
+    gallery[i].addEventListener("click", function () {
+      var dataTitle = this.getAttribute("dataTitle");
 
-      if(typeof swiper === 'object')
-      {
+      let imgs = portafolioImg.portafolio.filter(
+        (img) => img.titulo === dataTitle
+      );
+
+      if (typeof swiper === "object") {
         swiper.destroy(true, false);
         swiper = undefined;
-        document.getElementById('imagenes-swiper').innerHTML = '';
+        document.getElementById("imagenes-swiper").innerHTML = "";
       }
 
       imgs.map((image, i) => {
-        $('#imagenes-swiper').append(`<div class="swiper-slide slide-${i}">
+        $("#imagenes-swiper").append(`<div class="swiper-slide slide-${i}">
           <img src="${image.imagen}">
-        </div>`);  
+        </div>`);
       });
 
-      swiper = new Swiper('.swiper-container', {
-        effect: 'cube',
+      swiper = new Swiper(".swiper-container", {
+        effect: "cube",
         grabCursor: true,
         centeredSlides: true,
         updateOnWindowResize: true,
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
 
         //MANEJAR CON FLECHAS
         keyboard: {
@@ -66,14 +77,14 @@ function genPortafolio(portafolioImg) {
 
         //PAGINACION
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true,
         },
 
         // NAVEGACION
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       });
 
@@ -83,26 +94,29 @@ function genPortafolio(portafolioImg) {
 }
 
 //CERRAR PORTAFOLIO AL HACER CLICK EN CUALQUIER PARTE
-let flexPort = document.getElementById('flexModalPort');
+let flexPort = document.getElementById("flexModalPort");
 
-window.addEventListener('click', function (e) {
+window.addEventListener("click", function (e) {
   if (e.target == flexPort) {
-    window.location = '#portafolio'
+    window.location = "#portafolio";
     swiper.destroy(true, false);
   }
 });
 
 //FILTRO DE SELECCION PORTAFOLIO
 $(function () {
-  $('.filter').click(function () {
-    $(this).addClass('active').siblings().removeClass('active'); //con siblings selecciono a los hermanos de lo que hice click
-    let valor = $(this).attr('data-nombre');
-    if (valor == 'todos') {
-      $('.cont-work').show('1000');
-    }
-    else {
-      $('.cont-work').not('.' + valor).hide('1000');
-      $('.cont-work').filter('.' + valor).show('1000');
+  $(".filter").click(function () {
+    $(this).addClass("active").siblings().removeClass("active"); //con siblings selecciono a los hermanos de lo que hice click
+    let valor = $(this).attr("data-nombre");
+    if (valor == "todos") {
+      $(".cont-work").show("1000");
+    } else {
+      $(".cont-work")
+        .not("." + valor)
+        .hide("1000");
+      $(".cont-work")
+        .filter("." + valor)
+        .show("1000");
     }
   });
 

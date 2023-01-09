@@ -1,6 +1,95 @@
 {
-  "portafolio": 
-  [
+  "portafolio": [
+    {
+      "imagen": "img/portafolioimg/miproducto (1).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (2).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (3).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (4).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (5).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (6).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (7).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (8).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (9).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/miproducto (10).jpg",
+      "titulo": "Mi Producto App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.mi_producto",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/caribbean (1).jpg",
+      "titulo": "Caribbean App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.caribbean_app",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/caribbean (2).jpg",
+      "titulo": "Caribbean App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.caribbean_app",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/caribbean (3).jpg",
+      "titulo": "Caribbean App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.caribbean_app",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/caribbean (4).jpg",
+      "titulo": "Caribbean App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.caribbean_app",
+      "dataNombre": "movil"
+    },
+    {
+      "imagen": "img/portafolioimg/caribbean (5).jpg",
+      "titulo": "Caribbean App React Native",
+      "link": "https://play.google.com/store/apps/details?id=com.caribbean_app",
+      "dataNombre": "movil"
+    },
     {
       "imagen": "img/portafolioimg/aefsena (1).png",
       "titulo": "AEF SENA Nodejs MySQL",
@@ -1007,12 +1096,12 @@
     {
       "imagen": "img/portafolioimg/chatapp.jpeg",
       "titulo": "App Chat React Native",
-      "dataNombre": "android"
+      "dataNombre": "movil"
     },
     {
       "imagen": "img/portafolioimg/chatapp2.jpeg",
       "titulo": "App Chat React Native",
-      "dataNombre": "android"
+      "dataNombre": "movil"
     },
     {
       "imagen": "img/portadb1.jpg",
